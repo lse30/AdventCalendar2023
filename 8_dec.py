@@ -32,9 +32,7 @@ def main():
     tree = create_node_dict(data)
     starts = [x for x in tree.keys() if x[-1] == 'A']
     output = [find_path(tree, seq, x) for x in starts]
-    final = lcm(*output)
-    print(final)
-    return output
+    return lcm(*output)
 
 
 print(main())
